@@ -1,6 +1,10 @@
 package com.Research.Assistant;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.http.codec.json.KotlinSerializationJsonEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @Service
 public class ResearchService {
@@ -8,7 +12,17 @@ public class ResearchService {
 
     public String processContent(ResearchRequest researchRequest) {
         //1. Build the prompt
+        String prompt = buildPrompt(researchRequest);
+
         //2. Query the AI model API
+        Map<String, Object> requestBody = Map.of(
+            "constents", new Object[] {
+                    Map.of("parts", new Object[]{
+                            Map.of("text", prompt)
+                    })
+
+        });
+
         //3. parse the response
         //4. Return response
 
