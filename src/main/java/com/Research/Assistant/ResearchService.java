@@ -31,7 +31,7 @@ public class ResearchService {
         return "";
     }
 
-    //1. Build the prompt
+    //1. Build the prompts
     private String buildPrompt(ResearchRequest researchRequest){
 
         StringBuilder prompt = new StringBuilder();
