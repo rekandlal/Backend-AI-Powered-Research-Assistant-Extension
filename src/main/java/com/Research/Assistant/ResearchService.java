@@ -97,7 +97,7 @@ public class ResearchService {
         }
 
         // Return null or empty string if no text found
-        return null;
+        return "No Content found in response!";
     }
 
 
