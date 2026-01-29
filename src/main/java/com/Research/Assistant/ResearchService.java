@@ -1,6 +1,7 @@
 package com.Research.Assistant;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.codec.json.KotlinSerializationJsonEncoder;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +9,19 @@ import java.util.Map;
 
 @Service
 public class ResearchService {
+//    Spring reads application.properties at startup.
+//   It finds:
+//
+//    gemini.api.url = ....
+//    gemini.api.key = ....
+//
+//
+//    - It automatically puts those values into:
+    @Value("${gemini.api.url}")
+    private String geminiApiUrl;
 
+    @Value("${gemini.api.key}")
+    private String geminiApiKey;
 
     public String processContent(ResearchRequest researchRequest) {
         //1. Build the prompt
