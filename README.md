@@ -1,0 +1,1 @@
+A Spring Boot–based AI Research Assistant that processes text (summarize, explain, translate, generate Q&A, and more) using modern LLMs through the OpenRouter API. Designed as a backend service for browser or productivity extensions.
