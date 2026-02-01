@@ -7,16 +7,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/research")
 @CrossOrigin(origins = "*")
-@AllArgsConstructor // feature of lombok to create in
+@AllArgsConstructor
 public class ResearchController {
 
     private final ResearchService researchService;
 
     @PostMapping("/process")
-    public ResponseEntity<String> processContent(@RequestBody ResearchRequest researchRequest){
-
+    public ResponseEntity<String> processContent(@RequestBody ResearchRequest researchRequest) {
         String result = researchService.processContent(researchRequest);
-
         return ResponseEntity.ok(result);
     }
 }
