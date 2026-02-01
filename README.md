@@ -32,8 +32,7 @@ Frontend repo:
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-BACKEND-REPO.git
-cd YOUR-BACKEND-REPO
+git clone https://github.com/rekandlal/Backend-AI-Powered-Research-Assistant-Extension
 ```
 
 ---
